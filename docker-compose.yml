@@ -1,0 +1,11 @@
+version: "2"
+services:
+  docker-node:
+    container_name: docker-node
+    build: images/docker-node
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - "4000:4000"
+    tty: true
